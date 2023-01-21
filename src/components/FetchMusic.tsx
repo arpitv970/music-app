@@ -1,5 +1,6 @@
 import axios from 'axios';
 import { useEffect, useState } from 'react';
+import { HashLoader } from 'react-spinners';
 
 import './FetchMusic.css';
 
@@ -15,14 +16,15 @@ const options = {
 
 const FetchMusic = () => {
     const [music, setMusic] = useState<any[]>([]);
+    const [loading, setLoading] = useState<boolean>(true);
 
     useEffect(() => {
         const pullMusic = async () => {
-            axios
+            await axios
                 .request(options)
                 .then((res) => {
                     setMusic(res.data.tracks);
-                    console.log(res.data.tracks);
+                    setLoading(!loading);
                 })
                 .catch((err) => console.error(err));
         };
@@ -33,14 +35,22 @@ const FetchMusic = () => {
     return (
         <div>
             <h1 className='text-center'>All music</h1>
-            <div className='music-list'>
-                {music.map((m, index) => (
-                    <div className='d-flex flex-column justify-content-center align-items-center'>
-                        <img className='w-75' src={m.share.image} />
-                        <p>{m.title}</p>
-                    </div>
-                ))}
-            </div>
+
+            {loading === true ? (
+                <HashLoader
+                    cssOverride={{ display: 'block', margin: '25vh auto' }}
+                    color='#3600a4'
+                />
+            ) : (
+                <div className='music-list'>
+                    {music.map((m, index) => (
+                        <div className='d-flex flex-column justify-content-center align-items-center'>
+                            <img className='w-75' src={m.share.image} />
+                            <p>{m.title}</p>
+                        </div>
+                    ))}
+                </div>
+            )}
         </div>
     );
 };

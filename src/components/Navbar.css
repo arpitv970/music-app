@@ -1,0 +1,46 @@
+nav {
+    background-color: #00040f;
+}
+
+nav>ul>li {
+    margin: auto 2.2rem;
+    cursor: pointer;
+    color: rgb(130, 130, 130);
+    width: 100%;
+
+    transition: all 200ms ease-in-out 0ms;
+}
+
+nav>ul>li:hover {
+    color: white;
+}
+
+.tool-tip {
+    position: absolute;
+    color: white;
+    background-color: #00040f;
+    padding: 0.3rem 1rem;
+    border-radius: .5rem;
+    margin-left: 50%;
+    
+    opacity: calc(0);
+
+    transition: all 200ms ease-in-out 0ms;
+}
+
+nav>ul>li:hover .tool-tip{
+    opacity: calc(100);
+}
+
+.tool-tip>div {
+    position: absolute;
+    background-color: #00040f;
+    width: 0.8rem;
+    height: 0.8rem;
+
+   
+    top: 30%;
+    left: -4%;
+
+    transform: rotate(45deg);
+}

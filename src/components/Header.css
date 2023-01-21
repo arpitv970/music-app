@@ -1,0 +1,15 @@
+.header-box {
+    /* background-color: #21057b; */
+    background-image: url('/header-bg.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: white;
+    height: 40vh;
+    margin-bottom: 2rem;
+
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+
+    padding: 1% 6%;
+}

@@ -3,6 +3,7 @@ import { useEffect, useState } from 'react';
 import { HashLoader } from 'react-spinners';
 
 import './FetchMusic.css';
+import Header from './Header';
 
 const options = {
     method: 'GET',
@@ -34,7 +35,7 @@ const FetchMusic = () => {
 
     return (
         <div>
-            <h1 className='text-center'>All music</h1>
+            <Header />
 
             {loading === true ? (
                 <HashLoader
@@ -44,9 +45,9 @@ const FetchMusic = () => {
             ) : (
                 <div className='music-list'>
                     {music.map((m, index) => (
-                        <div className='d-flex flex-column justify-content-center align-items-center'>
+                        <div className='d-flex flex-column justify-content-around align-items-center'>
                             <img className='w-75' src={m.share.image} />
-                            <p>{m.title}</p>
+                            <p className='w-50 text-center'>{m.title}</p>
                         </div>
                     ))}
                 </div>

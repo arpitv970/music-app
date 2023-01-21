@@ -1,10 +1,10 @@
 .music-list {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
     margin: 1rem auto;
-    width: 90vw;
+    width: 70vw;
     gap: 1rem;
 }
 

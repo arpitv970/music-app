@@ -14,7 +14,7 @@ const options = {
 };
 
 const FetchMusic = () => {
-    const [music, setMusic] = useState<object[]>([]);
+    const [music, setMusic] = useState<any[]>([]);
 
     useEffect(() => {
         const pullMusic = async () => {

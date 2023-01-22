@@ -63,7 +63,7 @@ const Navbar = () => {
                     </li>
                     <li>
                         <NavLink
-                            to='/'
+                            to='/fav'
                             style={{
                                 textDecoration: 'none',
                                 color: 'rgb(130, 130, 130)',
@@ -84,7 +84,7 @@ const Navbar = () => {
                     </li>
                     <li>
                         <NavLink
-                            to='/'
+                            to='/playlists'
                             style={{
                                 textDecoration: 'none',
                                 color: 'rgb(130, 130, 130)',

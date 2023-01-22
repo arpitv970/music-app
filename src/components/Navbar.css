@@ -2,17 +2,18 @@ nav {
     background-color: #00040f;
 }
 
-nav>ul>li {
+.nav_initial {
     margin: auto 2.2rem;
     cursor: pointer;
-    color: rgb(130, 130, 130);
     width: 100%;
 
     transition: all 200ms ease-in-out 0ms;
+    color: 'rgb(130, 130, 130)';
+    transition: all 200ms ease-in-out 0ms;
 }
 
-nav>ul>li:hover {
-    color: white;
+.nav_Hover {
+    color: white !important;
 }
 
 .tool-tip {
@@ -22,13 +23,13 @@ nav>ul>li:hover {
     padding: 0.3rem 1rem;
     border-radius: .5rem;
     margin-left: 50%;
-    
+
     opacity: calc(0);
 
     transition: all 200ms ease-in-out 0ms;
 }
 
-nav>ul>li:hover .tool-tip{
+nav>ul>li:hover .tool-tip {
     opacity: calc(100);
 }
 
@@ -38,7 +39,7 @@ nav>ul>li:hover .tool-tip{
     width: 0.8rem;
     height: 0.8rem;
 
-   
+
     top: 30%;
     left: -4%;
 

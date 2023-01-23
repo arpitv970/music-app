@@ -29,7 +29,7 @@ nav {
     transition: all 200ms ease-in-out 0ms;
 }
 
-nav>ul>li:hover .tool-tip {
+.tool-tip__icon:hover .tool-tip {
     opacity: calc(100);
 }
 

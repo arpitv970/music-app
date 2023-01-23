@@ -8,7 +8,7 @@ const options = {
     url: 'https://shazam.p.rapidapi.com/songs/list-recommendations',
     params: { key: '484129036', locale: 'en-US' },
     headers: {
-        'X-RapidAPI-Key': '064513f2e6mshd0c94a237003569p1f9864jsn1c258c68b967',
+        'X-RapidAPI-Key': '9f9c71c4aemsh5e77d18ed69fabep1f2169jsn3f0d8839bfac',
         'X-RapidAPI-Host': 'shazam.p.rapidapi.com',
     },
 };

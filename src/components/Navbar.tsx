@@ -7,6 +7,7 @@ import { NavLink } from 'react-router-dom';
 import { useState } from 'react';
 
 import './Navbar.css';
+// import ToolTip from './Tooltips/ToolTipRight';
 import ToolTip from './ToolTip';
 
 const Navbar = () => {
@@ -18,7 +19,7 @@ const Navbar = () => {
         <nav className='container text-white position-fixed w-auto h-100 d-flex justify-content-center align-items-center'>
             <IconContext.Provider value={{ size: '2rem' }}>
                 <ul className='list-unstyled d-flex flex-column justify-content-evenly align-items-center text-center h-100'>
-                    <li>
+                    <li className='tool-tip__icon'>
                         <NavLink
                             to='/'
                             style={{
@@ -40,7 +41,7 @@ const Navbar = () => {
                         </NavLink>
                     </li>
 
-                    <li>
+                    <li className='tool-tip__icon'>
                         <NavLink
                             to='/search'
                             style={{
@@ -61,7 +62,7 @@ const Navbar = () => {
                             <ToolTip tip='Search' />
                         </NavLink>
                     </li>
-                    <li>
+                    <li className='tool-tip__icon'>
                         <NavLink
                             to='/fav'
                             style={{
@@ -82,7 +83,7 @@ const Navbar = () => {
                             <ToolTip tip='Favorite' />
                         </NavLink>
                     </li>
-                    <li>
+                    <li className='tool-tip__icon'>
                         <NavLink
                             to='/playlists'
                             style={{

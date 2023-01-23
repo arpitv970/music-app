@@ -1,11 +1,7 @@
 import axios from 'axios';
-
-import FetchMusic from './components/FetchMusic';
 import Navbar from './components/Navbar';
-
 import { useEffect, useState } from 'react';
 import Routing from './components/Routes/Routing';
-import { Music } from './components/Interfaces/Music';
 
 const options = {
     method: 'GET',
@@ -36,7 +32,7 @@ const App = () => {
     }, []);
 
     return (
-        <div>
+        <div className='App'>
             <Navbar />
             <Routing
                 music={music}

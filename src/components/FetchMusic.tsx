@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom';
 import { HashLoader } from 'react-spinners';
 
 import './FetchMusic.css';
@@ -13,7 +14,7 @@ const FetchMusic: React.FC<Music> = ({
 }) => {
     return (
         <div>
-            <Header />
+        <Header title='Your Favorite Tunes' />
 
             {loading === true ? (
                 <HashLoader
@@ -23,10 +24,14 @@ const FetchMusic: React.FC<Music> = ({
             ) : (
                 <div className='music-list'>
                     {music.map((m, index) => (
-                        <div className='d-flex flex-column justify-content-around align-items-center'>
-                            <img className='w-75' src={m.share.image} />
-                            <p className='w-50 text-center fw-bolder font-monospace'>{m.title}</p>
-                        </div>
+                        <Link style={{textDecoration: 'none', color: 'inherit'}} to={`/${m.key}`}>
+                            <div className='music-list__item d-flex flex-column justify-content-around align-items-center'>
+                                <img className='w-75' src={m.share.image} />
+                                <p className='w-50 text-center fw-bolder font-monospace'>
+                                    {m.title}
+                                </p>
+                            </div>
+                        </Link>
                     ))}
                 </div>
             )}

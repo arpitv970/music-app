@@ -13,3 +13,17 @@
 
     padding: 1% 6%;
 }
+
+.header-box__music {
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: white;
+    height: 40vh;
+    margin-bottom: 2rem;
+
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+
+    padding: 1% 6%;
+}

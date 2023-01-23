@@ -4,18 +4,23 @@
     justify-content: space-between;
     align-items: center;
     margin: 1rem auto;
+    margin-right: 10%;
     width: 70vw;
     gap: 1rem;
 }
 
 .music-list__item {
-    border: solid black 2px;
-    padding: 0.2rem 0.4rem;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    width: 20vw;
-    margin: auto;
+    /* border: solid black 2px; */
+    box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
+    padding-top: 12%;
+    border-radius: 1rem;
+    transition: all 300ms ease-in-out 0s;
 }
 
+.music-list__item>img {
+    border-radius: .2rem;
+}
+
+.music-list__item:hover {
+    box-shadow: rgba(0, 0, 0, 0.4) 0px 30px 90px;
+}

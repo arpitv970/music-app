@@ -2,7 +2,7 @@ import Header from "../Header";
 
 const Search = () => {
     return <div>
-        <Header />
+        <Header title='Search Your Music' />
     </div>;
 };
 

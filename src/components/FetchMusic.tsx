@@ -1,38 +1,16 @@
-import axios from 'axios';
-import { useEffect, useState } from 'react';
 import { HashLoader } from 'react-spinners';
 
 import './FetchMusic.css';
 import Header from './Header';
 
-const options = {
-    method: 'GET',
-    url: 'https://shazam.p.rapidapi.com/songs/list-recommendations',
-    params: { key: '484129036', locale: 'en-US' },
-    headers: {
-        'X-RapidAPI-Key': '064513f2e6mshd0c94a237003569p1f9864jsn1c258c68b967',
-        'X-RapidAPI-Host': 'shazam.p.rapidapi.com',
-    },
-};
+import { Music } from './Interfaces/Music';
 
-const FetchMusic = () => {
-    const [music, setMusic] = useState<any[]>([]);
-    const [loading, setLoading] = useState<boolean>(true);
-
-    useEffect(() => {
-        const pullMusic = async () => {
-            await axios
-                .request(options)
-                .then((res) => {
-                    setMusic(res.data.tracks);
-                    setLoading(!loading);
-                })
-                .catch((err) => console.error(err));
-        };
-
-        pullMusic();
-    }, []);
-
+const FetchMusic: React.FC<Music> = ({
+    music,
+    setMusic,
+    loading,
+    setLoading,
+}) => {
     return (
         <div>
             <Header />
@@ -40,14 +18,14 @@ const FetchMusic = () => {
             {loading === true ? (
                 <HashLoader
                     cssOverride={{ display: 'block', margin: '25vh auto' }}
-                    color='#3600a4'
+                    color='#003a68'
                 />
             ) : (
                 <div className='music-list'>
                     {music.map((m, index) => (
                         <div className='d-flex flex-column justify-content-around align-items-center'>
                             <img className='w-75' src={m.share.image} />
-                            <p className='w-50 text-center'>{m.title}</p>
+                            <p className='w-50 text-center fw-bolder font-monospace'>{m.title}</p>
                         </div>
                     ))}
                 </div>

@@ -17,6 +17,7 @@ const App = () => {
     const [music, setMusic] = useState<any[]>([]);
     const [musicDB, setMusicDB] = useState<any[]>([]);
     const [loading, setLoading] = useState<boolean>(true);
+    const [isAuth, setIsAuth] = useState<boolean>(false);
 
     useEffect(() => {
         const pullMusic = async () => {
@@ -40,7 +41,6 @@ const App = () => {
         if (items) {
             fetchMusic();
         }
-        
     }, []);
 
     return (
@@ -51,6 +51,7 @@ const App = () => {
                 setMusic={setMusic}
                 loading={loading}
                 setLoading={setLoading}
+                isAuth={isAuth}
             />
         </div>
     );

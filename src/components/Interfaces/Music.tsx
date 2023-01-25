@@ -3,4 +3,5 @@ export interface Music {
     setMusic: React.Dispatch<React.SetStateAction<any[]>>;
     loading: boolean;
     setLoading: React.Dispatch<React.SetStateAction<boolean>>;
+    isAuth: boolean;
 }

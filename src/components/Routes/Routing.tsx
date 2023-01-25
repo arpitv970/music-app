@@ -1,5 +1,6 @@
 import { Routes, Route, Navigate } from 'react-router-dom';
-import AuthUser from '../auth/authUser';
+import AuthUser from '../auth/AuthUser';
+import CreateAcc from '../auth/CreateAcc';
 import FetchMusic from '../FetchMusic';
 import { Music } from '../Interfaces/Music';
 import MusicComponent from '../Pages/MusicComponent';
@@ -35,6 +36,9 @@ const Routing: React.FC<Music> = ({
                     }
                 />
                 <Route path='/auth' element={<AuthUser />} />
+
+                <Route path='/create-user' element={<CreateAcc />} />
+
                 <Route
                     path='/search'
                     element={

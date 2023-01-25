@@ -2,6 +2,7 @@ import axios from 'axios';
 import Navbar from './components/Navbar';
 import { useEffect, useState } from 'react';
 import Routing from './components/Routes/Routing';
+import { User } from './components/Interfaces/User';
 
 const options = {
     method: 'GET',
@@ -17,7 +18,11 @@ const App = () => {
     const [music, setMusic] = useState<any[]>([]);
     const [musicDB, setMusicDB] = useState<any[]>([]);
     const [loading, setLoading] = useState<boolean>(true);
-    const [isAuth, setIsAuth] = useState<boolean>(false);
+
+    // TODO: fix default auth to false, till then do other minor work
+    const [isAuth, setIsAuth] = useState<boolean>(true);
+    const [users, setUsers] = useState<User>();
+    const [currentUser, setCurrentUser] = useState<User>();
 
     useEffect(() => {
         const pullMusic = async () => {

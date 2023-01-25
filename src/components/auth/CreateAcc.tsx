@@ -1,7 +1,12 @@
-import React from 'react';
+import { useState } from 'react';
 import Header from '../Header';
 
 const CreateAcc = () => {
+    const [userName, setUserName] = useState('');
+    const [email, setEmail] = useState('');
+    const [pass, setPass] = useState('');
+    const [confirmPass, setConfirmPass] = useState('');
+
     return (
         <div>
             <Header title='Create Your Account' />
@@ -11,7 +16,7 @@ const CreateAcc = () => {
                     <input
                         placeholder='Enter Full Name'
                         type='text'
-                        className='form-control'
+                        className='form-control border border-secondary'
                     />
                 </div>
                 <div className='user-email mb-3 w-100'>
@@ -19,7 +24,7 @@ const CreateAcc = () => {
                     <input
                         placeholder='Enter Email Address'
                         type='email'
-                        className='form-control'
+                        className='form-control border border-secondary'
                         aria-describedby='emailHelp'
                     />
                 </div>
@@ -28,7 +33,7 @@ const CreateAcc = () => {
                     <input
                         placeholder='Enter Password'
                         type='password'
-                        className='form-control'
+                        className='form-control border border-secondary'
                         aria-describedby='passwordHelpBlock'
                     />
                 </div>
@@ -37,7 +42,7 @@ const CreateAcc = () => {
                     <input
                         placeholder='Enter Password Again'
                         type='password'
-                        className='form-control'
+                        className='form-control border border-secondary'
                         aria-describedby='passwordHelpBlock'
                     />
                 </div>

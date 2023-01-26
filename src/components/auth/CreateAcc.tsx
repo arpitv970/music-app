@@ -1,48 +1,7 @@
-import { useState } from 'react';
-import { json, Navigate, redirect } from 'react-router-dom';
+import React from 'react';
 import Header from '../Header';
 
 const CreateAcc = () => {
-    const [userName, setUserName] = useState('');
-    const [email, setEmail] = useState<string>('asdf');
-    const [pass, setPass] = useState('');
-    const [confirmPass, setConfirmPass] = useState('');
-    const [acc, setAcc] = useState<boolean>(false);
-
-    const handleSubmit = (event: any) => {
-        event.preventDefault();
-        if (!userName) {
-            return alert('Enter Full Name');
-        }
-        if (!email) {
-            return alert('Enter Email');
-        }
-        if (!pass) {
-            return alert('Enter Password');
-        }
-        if (!confirmPass) {
-            return alert('Re-enter Password');
-        }
-
-        if (pass !== confirmPass) {
-            return alert('Enter correct Password');
-        }
-
-        const user = {
-            name: userName,
-            email: email,
-            pass: pass,
-        };
-
-        localStorage.setItem('userDB', JSON.stringify(user));
-
-        console.log(user.email);
-
-        setAcc(true);
-
-        return alert('Acc created');
-    };
-
     return (
         <div>
             <Header title='Create Your Account' />
@@ -56,10 +15,7 @@ const CreateAcc = () => {
                     <input
                         placeholder='Enter Full Name'
                         type='text'
-                        className='form-control border border-secondary'
-                        onChange={(e) => {
-                            setUserName(e.target.value);
-                        }}
+                        className='form-control'
                     />
                 </div>
                 <div className='user-email mb-3 w-100'>
@@ -67,7 +23,7 @@ const CreateAcc = () => {
                     <input
                         placeholder='Enter Email Address'
                         type='email'
-                        className='form-control border border-secondary'
+                        className='form-control'
                         aria-describedby='emailHelp'
                         onChange={(e) => {
                             setEmail(e.target.value);
@@ -79,7 +35,7 @@ const CreateAcc = () => {
                     <input
                         placeholder='Enter Password'
                         type='password'
-                        className='form-control border border-secondary'
+                        className='form-control'
                         aria-describedby='passwordHelpBlock'
                         onChange={(e) => {
                             setPass(e.target.value);
@@ -91,7 +47,7 @@ const CreateAcc = () => {
                     <input
                         placeholder='Enter Password Again'
                         type='password'
-                        className='form-control border border-secondary'
+                        className='form-control'
                         aria-describedby='passwordHelpBlock'
                         onChange={(e) => {
                             setConfirmPass(e.target.value);

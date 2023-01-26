@@ -57,6 +57,7 @@ const App = () => {
                 loading={loading}
                 setLoading={setLoading}
                 isAuth={isAuth}
+                setIsAuth={setIsAuth}
             />
         </div>
     );

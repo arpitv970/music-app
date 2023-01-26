@@ -4,7 +4,7 @@ import Header from '../Header';
 
 const CreateAcc = () => {
     const [userName, setUserName] = useState('');
-    const [email, setEmail] = useState('');
+    const [email, setEmail] = useState<string>('asdf');
     const [pass, setPass] = useState('');
     const [confirmPass, setConfirmPass] = useState('');
     const [acc, setAcc] = useState<boolean>(false);
@@ -36,7 +36,7 @@ const CreateAcc = () => {
 
         localStorage.setItem('userDB', JSON.stringify(user));
 
-        console.log(user);
+        console.log(user.email);
 
         setAcc(true);
 

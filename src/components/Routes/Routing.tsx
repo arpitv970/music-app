@@ -16,6 +16,7 @@ const Routing: React.FC<Music> = ({
     loading,
     setLoading,
     isAuth,
+    setIsAuth,
 }) => {
     return (
         <div>
@@ -30,13 +31,17 @@ const Routing: React.FC<Music> = ({
                                 loading={loading}
                                 setLoading={setLoading}
                                 isAuth={isAuth}
+                                setIsAuth={setIsAuth}
                             />
                         ) : (
                             <Navigate replace to='/auth' />
                         )
                     }
                 />
-                <Route path='/auth' element={<AuthUser />} />
+                <Route
+                    path='/auth'
+                    element={<AuthUser isAuth={isAuth} setIsAuth={setIsAuth} />}
+                />
 
                 <Route path='/create-user' element={<CreateAcc />} />
 

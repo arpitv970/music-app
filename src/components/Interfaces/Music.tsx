@@ -6,4 +6,5 @@ export interface Music {
     loading: boolean;
     setLoading: React.Dispatch<React.SetStateAction<boolean>>;
     isAuth: boolean;
+    setIsAuth: React.Dispatch<React.SetStateAction<boolean>>;
 }

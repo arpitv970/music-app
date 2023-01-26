@@ -15,10 +15,6 @@ const MusicComponent: React.FC<MusicPage> = ({
     mainImg,
 }) => {
     const [isHover, setIsHover] = useState(false);
-    const [isFav, setIsFav] = useState(false);
-    const handleFav = () => {
-        isFav ? setIsFav(false) : setIsFav(true);
-    };
     return (
         <IconContext.Provider value={{ size: '2rem' }}>
             <div className='music-component'>
@@ -29,9 +25,8 @@ const MusicComponent: React.FC<MusicPage> = ({
                         <span
                             onMouseEnter={() => setIsHover(true)}
                             onMouseLeave={() => setIsHover(false)}
-                            onClick={handleFav}
                         >
-                            {isHover === true || isFav === true ? (
+                            {isHover === true ? (
                                 <AiFillStar />
                             ) : (
                                 <AiOutlineStar />

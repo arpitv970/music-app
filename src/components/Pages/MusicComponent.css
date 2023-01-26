@@ -51,20 +51,3 @@
     width: 8rem;
 }
 
-.music-component__actions {
-    /* border: solid rebeccapurple 2px; */
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    width: 65vw;
-    margin-left: 36vw;
-}
-
-.music-component__icons {
-    /* border: solid rebeccapurple 2px; */
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    width: 25%;
-    cursor: pointer;
-}

@@ -15,7 +15,7 @@ const SignUp = ({ isAuth, setIsAuth }: Props) => {
     const [email, setEmail] = useState<string>('asdf');
     const [pass, setPass] = useState('');
 
-    const handleSubmit = (e: any) => {
+    const handleSubmit = (e: React.SyntheticEvent) => {
         e.preventDefault();
 
         if (!userDB) {

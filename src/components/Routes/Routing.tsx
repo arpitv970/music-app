@@ -3,6 +3,7 @@ import AuthUser from '../auth/AuthUser';
 import CreateAcc from '../auth/CreateAcc';
 import FetchMusic from '../FetchMusic';
 import { Music } from '../Interfaces/Music';
+import { User } from '../Interfaces/User';
 import MusicComponent from '../Pages/MusicComponent';
 import MusicPage from '../Pages/MusicComponent';
 import Fav from '../Sidebar_links/Fav';

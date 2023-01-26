@@ -7,5 +7,5 @@ export interface User {
     emailId: string;
     password: string;
     favMusic: string[];
-    userPlaylists: Playlist[];
+    userPlaylists: [Playlist[]];
 }

@@ -1,3 +1,5 @@
+import { User } from './User';
+
 export interface Music {
     music: any[];
     setMusic: React.Dispatch<React.SetStateAction<any[]>>;

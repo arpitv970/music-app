@@ -20,7 +20,7 @@ const App = () => {
     const [loading, setLoading] = useState<boolean>(true);
 
     // TODO: fix default auth to false, till then do other minor work
-    const [isAuth, setIsAuth] = useState<boolean>(true);
+    const [isAuth, setIsAuth] = useState<boolean>(false);
     const [users, setUsers] = useState<User>();
     const [currentUser, setCurrentUser] = useState<User>();
 

@@ -1,21 +1,22 @@
-import React from 'react';
+import { useState } from 'react';
 import Header from '../Header';
 
 const CreateAcc = () => {
+    const [userName, setUserName] = useState('');
+    const [email, setEmail] = useState('');
+    const [pass, setPass] = useState('');
+    const [confirmPass, setConfirmPass] = useState('');
+
     return (
         <div>
             <Header title='Create Your Account' />
-            {acc && <Navigate replace to='/auth' />}
-            <form
-                onSubmit={handleSubmit}
-                className='d-flex flex-column justify-content-center m-auto align-items-center'
-            >
+            <form className='d-flex flex-column justify-content-center m-auto align-items-center'>
                 <div className='user-name mb-3 w-100'>
                     <label>Full Name</label>
                     <input
                         placeholder='Enter Full Name'
                         type='text'
-                        className='form-control'
+                        className='form-control border border-secondary'
                     />
                 </div>
                 <div className='user-email mb-3 w-100'>
@@ -23,11 +24,8 @@ const CreateAcc = () => {
                     <input
                         placeholder='Enter Email Address'
                         type='email'
-                        className='form-control'
+                        className='form-control border border-secondary'
                         aria-describedby='emailHelp'
-                        onChange={(e) => {
-                            setEmail(e.target.value);
-                        }}
                     />
                 </div>
                 <div className='user-pass mb-3 w-100'>
@@ -35,11 +33,8 @@ const CreateAcc = () => {
                     <input
                         placeholder='Enter Password'
                         type='password'
-                        className='form-control'
+                        className='form-control border border-secondary'
                         aria-describedby='passwordHelpBlock'
-                        onChange={(e) => {
-                            setPass(e.target.value);
-                        }}
                     />
                 </div>
                 <div className='user-pass mb-3 w-100'>
@@ -47,11 +42,8 @@ const CreateAcc = () => {
                     <input
                         placeholder='Enter Password Again'
                         type='password'
-                        className='form-control'
+                        className='form-control border border-secondary'
                         aria-describedby='passwordHelpBlock'
-                        onChange={(e) => {
-                            setConfirmPass(e.target.value);
-                        }}
                     />
                 </div>
                 <button
